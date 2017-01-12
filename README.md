@@ -1,5 +1,5 @@
 # pimatic-weather4iframe
-Little Website to visualize the current weather and forecast. Especially designed for the pimatic iframe plugin. To use this little website, you need a wunderground account and a api key (see [https://www.wunderground.com/weather/api/](https://www.wunderground.com/weather/api/) to get yours).
+Little Website to visualize the current weather and forecast. Specially designed for the pimatic iframe plugin. To use this little website, you need a wunderground account and a api key (see [https://www.wunderground.com/weather/api/](https://www.wunderground.com/weather/api/) to get yours).
 ## Installation
 Either use a webserver on your Raspberry Pi or upload the files to your personal webspace.
 ## Usage
