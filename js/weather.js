@@ -1,11 +1,11 @@
 //current weather
 var weather = new XMLHttpRequest();
-weather.open("GET", "http://api.wunderground.com/api/edadb0fb1e616271/conditions/lang:DL/q/Germany/Hassfurt.json", false);
+weather.open("GET", "http://api.wunderground.com/api/<your api-key>/conditions/lang:<language code>/q/<country>/<city>.json", false);
 weather.send(null);
 
 var r = JSON.parse(weather.response);
 var weather_str = r.current_observation.weather;
-var temp = r.current_observation.temp_c;
+var temp = r.current_observation.temp_c; //change to .temp_f for fahrenheit
 var hum = r.current_observation.relative_humidity;
 var icon;
 var icons = r.current_observation.icon;
