@@ -1,12 +1,12 @@
 //forecast
 var forecast = new XMLHttpRequest();
-forecast.open("GET", "http://api.wunderground.com/api/edadb0fb1e616271/forecast/lang:DL/q/Germany/Hassfurt.json", false);
+forecast.open("GET", "http://api.wunderground.com/api/<your api-key>/forecast/lang:<language code>/q/<country>/<city>.json", false);
 forecast.send(null);
 
 var r = JSON.parse(forecast.response);
-var forecast_str = r.forecast.txt_forecast.forecastday[2].fcttext_metric;
-var temp_high = r.forecast.simpleforecast.forecastday[1].high.celsius;
-var temp_low = r.forecast.simpleforecast.forecastday[1].low.celsius;
+var forecast_str = r.forecast.txt_forecast.forecastday[2].fcttext_metric; //change to .fcttext for fahrenheit
+var temp_high = r.forecast.simpleforecast.forecastday[1].high.celsius; //change to .fahrenheit for fahrenheit
+var temp_low = r.forecast.simpleforecast.forecastday[1].low.celsius; //change to .fahrenheit for fahrenheit
 var icon_f;
 var icons_f = r.forecast.txt_forecast.forecastday[2].icon;
 switch (icons_f) {
